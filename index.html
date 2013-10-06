@@ -6,9 +6,13 @@
             $( document ).ready(function() {
                 var socket = io.connect('http://localhost');
                 socket.on('measurements', function (data) {
-                    console.log(data);
+                    $('#measurements').prepend($('<li></li>').html(data.n))
                 });
             });
         </script>
     </head>
+    <body>
+        <ul id='measurements'>
+        </ul>
+    </body>
 </html>

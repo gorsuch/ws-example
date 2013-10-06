@@ -8,10 +8,13 @@ app.get('/', function (req, res) {
     res.sendfile(__dirname + '/index.html')
 });
 
+function rand() {
+    return Math.floor((Math.random() * 100) + 1);
+}
+
 io.sockets.on('connection', function (socket) {
     setInterval(function () {
         socket.emit('measurements',
-                    { site: 1, exit_code: 0, http_code: 200, random: Math.floor((Math.random() * 100) + 1) });
+                    { n:  rand() });
     }, 1000);
 });
-
