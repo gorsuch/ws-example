@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
     res.sendfile(__dirname + '/index.html')
 });
 
-// returns a random number between 1 and 100.
+// returns a random number between 1 and 100
 function rand() {
     return Math.floor((Math.random() * 100) + 1);
 }
