@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+        <script src='/socket.io/socket.io.js'></script>
+        <script>
+            $( document ).ready(function() {
+                var socket = io.connect('http://localhost');
+                socket.on('measurements', function (data) {
+                    console.log(data);
+                });
+            });
+        </script>
+    </head>
+</html>
