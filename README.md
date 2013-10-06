@@ -12,7 +12,7 @@ $ npm install
 ## run
 
 ```sh
-node app.js
+$ node app.js
 ```
 
 Visit http://localhost:5000 to see the stream in action.
